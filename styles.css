@@ -1,11 +1,13 @@
+/* Basic body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Garamond', serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    text-align: center;
+    text-align: center; /* Update to align all content to the left */
 }
 
+/* Navigation bar styling */
 nav {
     background-color: #333;
     padding: 10px 0;
@@ -35,10 +37,12 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Header styling */
 header {
     margin-top: 50px;
 }
 
+/* Main content section styling */
 main {
     padding: 20px;
     max-width: 800px;
@@ -46,4 +50,52 @@ main {
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+/* Content section for About Me and others */
+.content-section {
+    margin-bottom: 30px;
+}
+
+/* Section title styling */
+.content-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Publication and conference item styling */
+.publication, .conference {
+    margin-bottom: 20px;
+}
+
+/* Subsection (paper/conference) title styling */
+h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Text paragraph styling */
+p {
+    margin: 5px 0;
+}
+
+/* Link styling */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific about-me section styling for justification */
+.about-me {
+    text-align: justify;
+}
+
+.publication {
+    text-align: left;
 }
