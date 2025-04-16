@@ -104,3 +104,16 @@ a:hover {
 .publication {
     text-align: left;
 }
+
+.scrollable-images {
+    display: flex; /* Display images in a horizontal row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 10px; /* Optional: Adds space between images */
+    padding: 10px 0; /* Optional: Adds vertical padding */
+}
+
+.scrollable-images img {
+    max-height: 200px; /* Optional: Constrain the height of the images */
+    object-fit: contain; /* Ensures the images don't stretch/distort */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
