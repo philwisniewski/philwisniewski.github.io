@@ -1,125 +1,517 @@
 /* styles.css */
 
-/* font import */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+/* font import - adding a sans-serif option for headers */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* CSS Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 /* Basic body styling */
 body {
     font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center; /* Update to align all content to the left */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.8em;
+}
+
+h1 {
+    font-size: 2.8rem;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 8px;
+    margin-top: 1.5em;
+    padding-left: 25px; /* Added left padding for headers */
+}
+
+p {
+    margin-bottom: 1.2em;
+    padding: 0 25px; /* Added horizontal padding for paragraphs */
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px; /* Increased from 20px to 40px */
 }
 
 /* Navigation bar styling */
 nav {
-    background-color: #333;
-    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px; /* Added padding to nav items container */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
-    font-size: 18px;
-    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
 }
 
 /* Header styling */
 header {
-    margin-top: 50px;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #e9f7fe, #f2f2f2);
+}
+
+header h1 {
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Main content section styling */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 40px 0;
+}
+
+section {
     background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+/* Section content wrapper for additional padding */
+.section-content {
+    padding: 0 25px; /* Added padding for section content */
+}
+
+/* About Me section */
+.about-me {
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #444;
+    padding: 0 25px; /* Specific padding for about-me text */
+}
+
+/* Publication styling */
+.publication {
+    text-align: left;
+    padding: 20px 40px; /* Increased horizontal padding */
+    border-left: 3px solid #007bff;
+    background-color: #f9f9f9;
+    margin: 0 25px 20px 25px; /* Added horizontal margin */
+    border-radius: 0 5px 5px 0;
+}
+
+/* Project details styling */
+.project-details {
+    background-color: #f8f9fa;
+    padding: 25px 40px; /* Increased horizontal padding */
     border-radius: 8px;
+    margin: 20px 25px 0 25px; /* Added horizontal margin */
 }
 
-/* Content section for About Me and others */
-.content-section {
-    margin-bottom: 30px;
+/* Image gallery */
+.scrollable-images {
+    display: flex;
+    gap: 15px;
+    padding: 15px 25px; /* Added horizontal padding */
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f0f0f0;
 }
 
-/* Section title styling */
-.content-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    font-weight: bold;
+.scrollable-images img {
+    height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Publication and conference item styling */
-.publication, .conference {
-    margin-bottom: 20px;
-}
-
-/* Subsection (paper/conference) title styling */
-h3 {
-    font-size: 1.4em;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-/* Text paragraph styling */
-p {
-    margin: 5px 0;
+.scrollable-images img:hover {
+    transform: translateY(-5px);
 }
 
 /* Link styling */
 a {
-    color: #007BFF;
+    color: #007bff;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
+    color: #0056b3;
     text-decoration: underline;
 }
 
-/* Specific about-me section styling for justification */
-.about-me {
-    text-align: justify;
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: #f0f0f0;
+    padding: 40px 0 20px;
+    margin-top: 60px;
 }
 
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 15px 0 0 25px; /* Added left margin to align with content */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+/* Skill tags */
+.skills {
+    margin-top: 30px;
+    padding: 0 25px; /* Added horizontal padding */
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skill-tags span {
+    background-color: #e9f7fe;
+    color: #007bff;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Card styling for projects */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px 30px; /* Increased horizontal padding */
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 15px;
+    padding: 0; /* Reset padding to prevent double padding */
+}
+
+/* Grid layout for projects page */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 25px; /* Added horizontal padding */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header {
+        padding: 60px 20px;
+    }
+
+    section {
+        padding: 25px 15px; /* Adjusted for mobile */
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        padding-left: 15px; /* Reduced padding for mobile */
+    }
+
+    p, .about-me, .skills {
+        padding: 0 15px; /* Reduced padding for mobile */
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px; /* Reduced padding for mobile */
+    }
+
+    .publication, .project-details {
+        margin: 0 15px 20px 15px; /* Reduced margin for mobile */
+        padding: 20px 25px; /* Reduced padding for mobile */
+    }
+
+    .btn {
+        margin-left: 15px; /* Reduced margin for mobile */
+    }
+}
+
+/* Resume viewer styling */
+.resume-viewer {
+    margin-top: 30px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conference cards */
+.conference-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conference-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.conference-card h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.conference-card p {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.conference-card i {
+    color: #555;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.conference-link, .paper-link {
+    display: inline-flex;
+    align-items: center;
+    color: #007bff;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.conference-link i, .paper-link i {
+    margin-right: 5px;
+}
+
+/* Contact options */
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    margin-bottom: 20px;
+    color: #555;
+    padding: 0;
+}
+
+.contact-card .btn {
+    width: 100%;
+    margin: 0;
+}
+
+/* Publication specific styles */
 .publication {
-    text-align: left;
+    margin-bottom: 30px;
+    padding: 25px 30px;
 }
 
-.scrollable-images {
-    display: flex; /* Align images horizontally */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 10px; /* Adds space between images */
-    padding: 10px 0; /* Optional: Adds vertical padding */
-    width: 100%; /* Ensure the container takes up the full width */
-    white-space: nowrap; /* Prevent wrapping of images */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-    scrollbar-width: thin; /* Thinner scrollbar for Firefox */
+.publication h3 {
+    color: #333;
+    margin-top: 0;
 }
 
-.scrollable-images img {
-    height: 300px; /* Set a fixed height for all images */
-    width: auto; /* Allow width to adjust based on aspect ratio */
-    max-width: 200px; /* Limit the width of the images */
-    object-fit: contain; /* Ensure images fit without stretching */
-    flex-shrink: 0; /* Prevent images from shrinking */
+.publication p {
+    padding: 0;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Intro section for pages */
+.intro-section {
+    background: transparent;
+    box-shadow: none;
+    padding-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-viewer {
+        padding: 10px;
+    }
+
+    .conference-card, .publication {
+        padding: 20px;
+    }
 }

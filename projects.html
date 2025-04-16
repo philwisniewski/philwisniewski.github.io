@@ -3,55 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Philip Wisniewski | Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Projects portfolio of Philip Wisniewski, Computer Science student at Purdue University">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="publications.html"><i class="fas fa-file-alt"></i> Publications</a></li>
+        <li><a href="resume.html"><i class="fas fa-file-pdf"></i> Resume</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
 </nav>
 
+<header>
+    <div class="container">
+        <h1>Personal Projects</h1>
+        <p>Showcasing my work in AI, game development, and systems programming</p>
+    </div>
+</header>
+
 <main>
-    <h1>My Projects</h1>
-    <p>Here are some of my recent projects.</p>
-
-    <section>
-        <div class="project-details">
-            <h2>Pokévaluator</h2>
-            <p>Multiplatform app to fetch and store Pokemon cards and their values.</p>
-            <p>Tech Stack: Dart, Flutter, TCGplayer API, AdMob</p>
-            <p>Private GitHub repo due to AdMob keys unfortunately :(</p>
-
-            <h3>Screenshots of App</h3>
-            <div class="scrollable-images">
-                <img src="images/pokevaluator/scan_page.PNG" alt="scan_page.png">
-                <img src="images/pokevaluator/search_page.PNG" alt="search_page.png">
-                <img src="images/pokevaluator/portfolio_page.PNG" alt="portfolio_page.png">
-                <img src="images/pokevaluator/card_page1.PNG" alt="card_page1.png">
-                <img src="images/pokevaluator/card_page2.PNG" alt="card_page2.png">
-                <img src="images/pokevaluator/deals_page.PNG" alt="deals_page.png">
-                <img src="images/pokevaluator/settings_page.PNG" alt="settings_page.png">
+    <div class="container">
+        <section class="intro-section">
+            <div class="section-content">
+                <p>Here are some of my recent projects. Academic projects will be listed in a separate section below.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <h2>Project 2</h2>
-        <p>Description of project 2.</p>
-        <a href="#">View on GitHub</a>
-    </section>
+        <section>
+            <div class="project-details">
+                <h2>AI SLURM Job Waittime Predictor</h2>
+                <div class="section-content">
+                    <p>Researched and developed a queue time prediction model using historical data from the SLURM workload manager
+                        on the ANVIL supercomputing cluster. Deployed model in command line tool accessible to all users.
+                        More information available in publications section.</p>
 
-    <section>
-        <h2>Project 3</h2>
-        <p>Description of project 3.</p>
-        <a href="#">View on GitHub</a>
-    </section>
+                    <p><strong>Tech stack:</strong> Python, PyTorch, PostgreSQL, SLURM, Numpy, Pandas, XGBoost, Neptune, R</p>
+
+                    <p>Note that GitHub repository is not conclusive, and the final model and command line tool are in a
+                        separate private GitHub repo. I will try to get around to moving some of those files here in the future.</p>
+
+                    <a href="https://github.com/srodenbeck/QueueTimePrediction" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+
+                    <h3>Screenshots of App</h3>
+                    <div class="scrollable-images">
+                        <img src="images/anvil_waittime/usage.png" alt="usage.png">
+                        <img src="images/anvil_waittime/results.png" alt="results.png">
+                        <img src="images/anvil_waittime/design_overview.png" alt="design_overview.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="project-details">
+                <h2>Pokévaluator</h2>
+                <div class="section-content">
+                    <p>Multiplatform app to fetch and store Pokemon cards and their values.</p>
+
+                    <p><strong>Tech Stack:</strong> Dart, Flutter, TCGplayer API, AdMob</p>
+
+                    <p>Private GitHub repo due to AdMob keys unfortunately :(</p>
+
+                    <h3>Screenshots of App</h3>
+                    <div class="scrollable-images">
+                        <img src="images/pokevaluator/scan_page.PNG" alt="scan_page.png">
+                        <img src="images/pokevaluator/search_page.PNG" alt="search_page.png">
+                        <img src="images/pokevaluator/portfolio_page.PNG" alt="portfolio_page.png">
+                        <img src="images/pokevaluator/card_page1.PNG" alt="card_page1.png">
+                        <img src="images/pokevaluator/card_page2.PNG" alt="card_page2.png">
+                        <img src="images/pokevaluator/deals_page.PNG" alt="deals_page.png">
+                        <img src="images/pokevaluator/settings_page.PNG" alt="settings_page.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="project-details">
+                <h2>Terminal Chess</h2>
+                <div class="section-content">
+                    <p>Multiplayer chess utilizing Unix Sockets. Includes a lobby feature, custom names, and makes use of threading
+                        to support multiple games at once.</p>
+
+                    <p><strong>Tech stack:</strong> C (Key libraries: pthread, sys/socket, sys/un.h)</p>
+
+                    <a href="https://github.com/philwisniewski/TerminalChess" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+
+                    <h3>Screenshots of App</h3>
+                    <div class="scrollable-images">
+                        <img src="images/terminal_chess/chess_client1.png" alt="chess_client1.png">
+                        <img src="images/terminal_chess/chess_client2.png" alt="chess_client2.png">
+                        <img src="images/terminal_chess/chess_server.png" alt="chess_server.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="project-details">
+                <h2>Chip8 Emulator</h2>
+                <div class="section-content">
+                    <p>Program to read and execute full CHIP-8 instruction set and run programs in a window using SDL.
+                        Several games are included in the repository along with steps to compile.</p>
+
+                    <p><strong>Tech stack:</strong> C++, SDL</p>
+
+                    <a href="https://github.com/philwisniewski/Chip8" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+
+                    <h3>Screenshots of App</h3>
+                    <div class="scrollable-images">
+                        <img src="images/chip8/breakout.png" alt="breakout.png">
+                        <img src="images/chip8/pong.png" alt="pong.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="project-details">
+                <h2>Lego Multiplayer Shooter</h2>
+                <div class="section-content">
+                    <p>Developed 3D FPS game inspired by Lego. The project supports custom lobbies and networking, as well as
+                        customizable characters and weapons.</p>
+
+                    <p><strong>Tech stack:</strong> C#, Unity, Photon</p>
+
+                    <a href="https://github.com/philwisniewski/Unity-Multiplayer-Shooter" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+
+                    <h3>Screenshots of App</h3>
+                    <div class="scrollable-images">
+                        <img src="images/legofps/menu.png" alt="menu.png">
+                        <img src="images/legofps/ingame1.png" alt="ingame1.png">
+                        <img src="images/legofps/demo_room.png" alt="demo_room.png">
+                        <img src="images/legofps/ingame2.png" alt="ingame2.png">
+                        <img src="images/legofps/lobby.png" alt="lobby.png">
+                        <img src="images/legofps/color_selection.png" alt="color_selection.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Academic Projects</h2>
+            <div class="section-content">
+                <p>Coming soon...</p>
+            </div>
+        </section>
+    </div>
 </main>
+
+<footer>
+    <div class="container">
+        <div class="social-links">
+            <a href="https://github.com/philwisniewski" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/philip-wis/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:pswisniewski@yahoo.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Philip Wisniewski. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
