@@ -106,14 +106,17 @@ a:hover {
 }
 
 .scrollable-images {
-    display: flex; /* Display images in a horizontal row */
+    display: flex; /* Align images horizontally */
     overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 10px; /* Optional: Adds space between images */
+    gap: 10px; /* Adds space between images */
     padding: 10px 0; /* Optional: Adds vertical padding */
+    width: 100%; /* Ensure the container takes up the full width */
+    white-space: nowrap; /* Prevent wrapping of images */
 }
 
 .scrollable-images img {
-    max-height: 200px; /* Optional: Constrain the height of the images */
-    object-fit: contain; /* Ensures the images don't stretch/distort */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Limit the width of the images to avoid them growing too large */
+    object-fit: contain; /* Ensure images fit within the defined size without stretching */
     flex-shrink: 0; /* Prevent images from shrinking */
 }
