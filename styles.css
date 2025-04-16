@@ -112,11 +112,14 @@ a:hover {
     padding: 10px 0; /* Optional: Adds vertical padding */
     width: 100%; /* Ensure the container takes up the full width */
     white-space: nowrap; /* Prevent wrapping of images */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+    scrollbar-width: thin; /* Thinner scrollbar for Firefox */
 }
 
 .scrollable-images img {
-    height: auto; /* Maintain aspect ratio */
-    max-width: 200px; /* Limit the width of the images to avoid them growing too large */
-    object-fit: contain; /* Ensure images fit within the defined size without stretching */
+    height: 300px; /* Set a fixed height for all images */
+    width: auto; /* Allow width to adjust based on aspect ratio */
+    max-width: 200px; /* Limit the width of the images */
+    object-fit: contain; /* Ensure images fit without stretching */
     flex-shrink: 0; /* Prevent images from shrinking */
 }
