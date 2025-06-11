@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Beginner Computer Science Walkthrough</title>
+    <link rel="stylesheet" type="text/css" href="walkthrough_styles.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Navigation/Menu -->
+        Computer Science Tutorial (HTML + JS)
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <h1>Introduction</h1>
+        <p>
+            This tutorial will cover the basics of computer science, 
+            with a focus on HTML and Javascript. I will start with an
+            introduction to some general programming concepts through
+            Javascript, and we can get into HTML after that.
+        </p>
+
+        <h1>Helpful tools</h1>
+        <p>
+            Prior to beginning, we will download and set up a couple
+            helpful tools. For starters, we will need a place to run
+            our code. 
+        </p>
+        <h2>Programiz</h2>
+        <p>
+            This is what I will recommend you use for the sake of this
+            tutorial, as it is an online compiler/interpreter (I will explain
+            these concepts in the next section). Point is, you can write
+            and run code from the web, easy peasy. 
+        </p>
+        <a href="https://www.programiz.com/html/online-compiler/">HTML</a>
+        <br>
+        <a href="https://www.programiz.com/javascript/online-compiler/">Javascript</a>
+        <br>
+
+        <h1>Let's begin!</h1>
+        <p>
+            Start by opening up the Javascript interpreter linked above. Now is also an important 
+            time to highlight the basics of some programming concepts. For starters, here is an
+            exmaple code sample (you don't have to worry about what it does yet)
+        </p>
+<pre><code>// This is a comment! It won't get run when the program runs
+let first_var = 2
+let second_var = 3
+console.log(first_var + second_var) // this prints 5
+</code></pre>
+        <p>
+            Some programming languages are whats called compiled languages, while others are called
+            interpreted languages. The main difference is as follows: a compiled language is converted
+            into machine code (1s and 0s) before being run, whereas an interpreted language
+            is turned into 1s and 0s once you start running it (while the program runs). You don't need to 
+            worry about this at all right now, just sharing for fun. Javascript (the language you will
+            be using) is an interpreted language, so it will be converted on the fly. This means that in
+            the above code snippet, the computer will run each line one at a time. 
+            The lines may look scary, but I promise we'll go slow. 
+        </p>
+    
+        <h1>Hello, world!</h1>
+        <p>
+            Hello, world! is typically the first program most people will ever write. Let's jump write in!
+            <br>
+            Open up the javascript interpreter mentioned earlier.
+            <img src="images/programiz_init_screen.png">
+            Here we can see the code area (on the left) and the output (on the right). Let's look through line by line.
+            <br>
+            The first two lines are called comments. Comments are just helpful messages programmers can leave
+            that <strong>won't</strong> be run when the program runs. 
+            <br>
+            The third line is blank. The computer will ignore this line as well, but blank lines can help divide
+            up your code so it's easier to read.
+            <br>
+            The fourth line is where the magic happens. Before focusing too much on the syntax of the line, I want
+            you to think about functions in math. Say you have f(x) = x^2. You could call f your function, and x the argument to that
+            function. If you pass in x=3, f(3) will return 9, f(4) will return 16, and so on.
+            This line works in esssentailly the same way. 
+            <br>
+            console.log is a function which will write the input to the terminal. The input (arguments) are passed inside the parentheses.
+            Change the text inside the parentheses from <strong>Try programiz.pro</strong> to <strong>Hello, world!</strong>, then click <strong>Run</strong>.
+            <br>
+            You should see the result in the output say <strong>Hello, world!</strong> now! 
+            <br>
+            Congratulations, you just completed your first program. 
+        </p>
+        
+        <h1>Variables</h1>
+        <p>
+            While it's very cool that we can write what we want printed into console.log, it could get extremely tedious if we needed to use the
+            same message over and over again. This is where variables come into play. Delete all the code in the editor, and replace it with the following.
+        </p>
+<pre><code>let myVar = "Hello, world!"
+
+console.log(myVar)
+</code></pre>
+        <p>
+            This will create a variable which contains the text "Hello, world!", which you can then pass into the console.log method. 
+            If you run this, you should see the same output as before.
+            <br>
+            Variables can also be changed. Below the let myVar line but above the console.log line, add the following code snippet.
+        </p>
+<pre><code>myVar = "Hello, Noah!"</code></pre>
+        <p>
+            What do you think will be outputted now? Run it to find out.
+            <br>
+            It's also important to remember that when you create a variable, you will need to use the keyword <strong>let</strong>, but after that you can just reference it by name.
+        </p>
+
+        <h3>Variable types</h3>
+        <p>Variables can contain different types of information, from numbers, to text, to a file. Here are some common types below.
+            I will also give some examples of how they are used together.
+        </p>
+        <li>String: this type is what represents text. Our myVar variable from before would be considered a string variable. Strings are wrapped in double quotes, and look something like this: "hello", "Noah", "I like pizza"</li>
+        <pre><code>let myStr = "apple"
+myStr = "pizza"
+console.log(myStr)
+// adding strings together will concatenate the result
+myStr = myStr + " is tasty"
+console.log(myStr)</code></pre>
+        <li>char: this type represents a singular letter, number, or other character. In most languages, chars are represented between single quotes, like 'a', '3', 'X'</li>
+        <pre><code>let myChar = 'a'</code></pre>
+        <li>int: this type represents a basic integer. ints are represented without any quotes around them ('4' and "4" are different than 4, and the computer will treat them differently). Examples of ints are: 4, 9, -300.</li>
+        <pre><code>// integers can use the following operators: +, -, *, /, %
+let x = 4
+let y = 7
+let z = x * y
+x = x + 2
+y = y - x
+console.log(x)
+console.log(y)
+console.log(z)</code></pre>
+        <li>bool: this type represents a true or false state. It can be used in different logic situations. bools can either be true or false (without quotes)</li>
+<pre><code>// bools can use the operators || (or) and && (and). 
+// You can also compare other types of variables and set the result to a bool.
+let myBool = true
+let wrong = false
+console.log(myBool && wrong)
+console.log(myBool || wrong)
+// you can use == to check if two values are equal
+// or != to check if they differ
+myBool = (7 == 9)
+console.log(myBool)
+myBool = (7 != 9)
+console.log(myBool)
+// you can also use <, <=, >, and >= to compare if two values are</and>
+// less than, less than or equal to, greater than, or greater than or equal to respectively
+</code></pre>
+        <li>float: this type represents decimal numbers. floats can look like: 0.0, 7.3, 3.14. Note that in Javascript, technically all floats and ints are actually considered the same type of variable and are called the type number</li>
+<pre><code>let myFloat = 1.5
+console.log(myFloat * 2.5)
+</code></pre>
+        <br>
+        
+        <h1>Control flow</h1>
+        In our programs, it normally runs line by line. But what if we want it to repeat certain lines or to skip over others depending on the result of a variable?
+        This is where if statements and loops come into play.
+        <h3>if</h3>
+        An if statement will only execute the code inside its curly brackets if the statment inside the parentheses is true.
+        if statements will look like the following
+        <pre><code>if (condition) {
+    // execute code inside here
+}
+// jump straight here if the condition was false
+// the program will still reach here even if it does the code inside first</code></pre>
+
+        <p>Try writing some code that will make a variable called myVar, set it to a number of your choosing, and if
+            it's greater than 0, print out to the console that it is positive
+        </p>
+
+        <h3>else</h3>
+        <p>
+            else statements are used if we want some code to run if a condition was not met in an if statement. The syntax looks similar to if statements, 
+            where the code to run is surrounded by { and }, but we don't add parentheses or a condition this time.
+            Let's modify the code from the previous section to support this.
+        </p>
+<pre><code>let myNum = 7
+if (myNum >= 0) {
+    console.log("myNum is positive!")
+}
+else {
+    console.log("myNum is negative!")
+}</code></pre>
+        <p>Try changing the value of myNum a few times and running the code to see how the output changes.</p>
+
+        <h3>else if</h3>
+        <p>else if statements combine the two previous kinds of control flow statements, where they require all previous
+            conditions to have failed, but they still need their own condition to be met. An infinite number of if-else statements
+            can be added after an if statement (but they need an if statement first). Here's an example.
+        </p>
+<pre><code>let myNum = 3
+if (myNum < 0) {
+    console.log("myNum is negative")
+}
+else if (myNum == 0) {
+    console.log("myNum is zero")
+}
+else if (myNum == 3) {
+    console.log("myNum is three")
+}
+else {
+    console.log("myNum is positive")
+}</code></pre>
+        <p>Change the value of myNum a few times to see how the output changes.</p>
+
+        <h3>for loops</h3>
+        <p>Now let's say you want to run a similar section of code a set number of times. This is where for loops can be helpful!</p>
+        <p>The basic structure of for loops looks like this:</p>
+<pre><code>for (expression 1; expression 2; expression 3) {
+    // code to be executed
+}
+</code></pre>
+        <p><strong>expression 1</strong> is executed once before the loop runs at all. This is often used for variable initialiations.</p>
+        <br>
+        <p><strong>expression 2</strong> checks a condition, and if true, will run the loop once. The for loop will repeat so long as this condition is true</p>
+        <br>
+        <p><strong>expression 3</strong>This expression will run once at the end of the loop each time the loop runs</p>
+        <br>
+        <p>Here's an example of how a for loop might work. Let's say we want to run it 10 times.</p>
+<pre><code>// i is often used as a "counter" variable in for loops
+for (let i = 0; i < 10; i = i + 1) {
+    console.log("This is iteration " + i)
+}</code></pre>
+
+        <h3>while loops</h3>
+        <p>contrary to for loops which often have set amounts of times they will run, while loops will run until their condition is false (and sometimes not at all).
+            Here's the syntax for a while loop
+        </p>
+<pre><code>while (expression) {
+    // execute code
+}
+</code></pre>
+        <p>an example of how this might look in practice is as follows:</p>
+<pre><code>let myVar = 5
+while (myVar >= 0) {
+    console.log("myVar = " + myVar)
+    myVar = myVar - 1
+}
+</code></pre>
+        <h3>break</h3>
+        <p>
+            Sometimes we will want to break out of and stop a loop early. This is where the break keyword
+            can help. if we write the line <srong>break</srong>, the loop will immediately exit, even if there's more lines to be executed below inside the loop.
+        </p>
+<pre><code>for (let i = 0; i < 100; i = i + 1) {
+    console.log("Hello")
+    if (i == 4) {
+        break
+    }
+    console.log("world")
+}
+</code></pre>
+
+        <h1>Number guessing game</h1>
+        <p>Using what we've learned so far, we can make a number guessing game! We will just need a few extra methods to use first</p>
+        <h3>Generate a random integer</h3>
+        <p>We can use the Math.random() method to generate a random float between 0 and 1</p>
+    <pre><code>for (let i = 0; i < 10; i = i + 1) {
+    console.log(Math.random())
+}</code></pre>
+
+        <h3>Making it an integer</h3>
+        <p>
+            if we multiply the result of the Math.random() method by a positive number, and then apply the Math.floor() method, we can effectively generate a random number in the range of [0, number_multiplied)
+        </p>
+        <p>Let's use this to make a random integer!</p>
+<pre><code>// not inclusive
+let maxNumber = 10
+let randomInt = Math.floor(Math.random() * maxNumber)
+console.log(randomInt)</code></pre>
+
+        <h3>Getting input</h3>
+        <p>JavaScript provides a handy method for getting input from the user via the prompt() method.
+            prompt() works as follows:
+            <br>
+            with no arguments:
+            <pre><code>let response = prompt()</code></pre>
+            will wait for the user to enter some input and store it in the variable response
+            <br>
+            with an argument:<br>
+            if you pass an argument into prompt(), the console will print that out first before accepting input.
+            <pre><code>let response = prompt("Enter a number!\n")</code></pre>
+        </p>
+        <h3>Converting input to an int</h3>
+        <p>Unfortunately, prompt() will return a string instead of an integer like we want. If we were to try to compare the result of prompt() with an integer, it would always return false.
+            However, JavaScript provides us a method to do so! We will use the Number() method for this
+        </p>
+<pre><code>let myNum = prompt()
+console.log(typeof(myNum))
+myNum = Number(myNum)
+console.log(typeof(myNum))
+</code></pre>
+        <p>
+            We can now make a guessing game that will continue until the user correctly guesses the random number.
+        </p>
+<pre><code>// using the randomInt code from before
+let maxNumber = 10
+let randomInt = Math.floor(Math.random() * maxNumber)
+let userInput = 0
+let playing = true
+while (playing) {
+    userInput = Number(prompt("Enter a number between 0 and " + maxNumber + ":\n"))
+
+    if (userInput == randomInt) {
+        console.log("You guessed the number!")
+        playing = false
+    }
+    else if (userInput > randomInt) {
+        console.log("Your guess was too high.")
+    }
+    else {
+        console.log("Your guess was too low.")
+    }
+}
+</code></pre>
+
+        <p>
+            Here's an example of what the output should look like when you run it!
+        </p>
+        <img src="images/example_output.png">
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Footer details -->
+        &copy Philip Wisniewski 2025
+    </footer>
+</body>

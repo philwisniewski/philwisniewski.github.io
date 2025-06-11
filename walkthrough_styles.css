@@ -1,0 +1,107 @@
+/* General Reset or Normalize */
+body, h1, h2, h3, p, ul, ol, li, header, footer, main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    font-size: 16px; /* Default text size */
+    line-height: 1.5; /* Line spacing */
+    background-color: #f5f5f5; /* Background color */
+    color: #333; /* Default text color */
+}
+
+/* Header styles */
+header {
+    background-color: #0077cc; /* Example header background color */
+    padding: 20px; /* Spacing */
+    text-align: center; /* Align content */
+    color: white; /* Font color */
+}
+
+/* Navigation styles (if applicable) */
+nav {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    display: flex; /* Display as horizontal navigation */
+    justify-content: center; /* Center items */
+}
+
+nav ul li {
+    margin: 0 10px; /* Spacing between menu items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underlines */
+    color: white; /* Link color */
+    font-weight: bold; /* Bold text (optional) */
+}
+
+/* Main content area styles */
+main {
+    padding: 20px; /* Space around content */
+    background-color: white; /* Content background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gentle shadow */
+    margin: 20px auto; /* Center content with auto margins */
+    max-width: 800px; /* Limit content width */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Center align text */
+    padding: 10px; /* Add space */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+}
+
+/* Utility classes (optional for teaching purposes) */
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.primary-bg {
+    background-color: #0077cc; /* Example primary color */
+    color: white;
+}
+
+.margin {
+    margin: 20px;
+}
+
+.padding {
+    padding: 10px;
+}
+
+/* Responsive design example (optional) */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        max-width: 100%; /* Full-width for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical navigation for small screens */
+        align-items: center;
+    }
+}
+
+pre code {
+  background-color: #f1f1f1; /* Light gray background */
+  border: 1px solid #ccc; /* Thin gray border */
+  padding: 10px; /* Add some padding */
+  font-family: monospace; /* Use a monospace font */
+  display: block; /* Display as a block element */
+  color: #333;
+}
